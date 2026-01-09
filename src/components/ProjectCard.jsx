@@ -1,11 +1,38 @@
 import { Project } from "../libs/project";
+import Israel from "../assets/Israel.jpeg"
+import { easeInOut, motion } from "motion/react";
 
 const ProjectCard = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {Project.map(({ id, title, year, type }) => (
-        <div key={id} className="flex flex-col gap-2">
-          <div className="h-80 bg-black hover:rounded-2xl"></div>
+        <motion.div 
+          
+      initial={{
+        y: 30,
+        opacity: 0,
+        filter: "blur(2px)",              
+      }}
+
+      whileInView={{
+        y: 0,
+        opacity: 1,
+        filter: "blur(0px)"
+      }}
+
+      transition={{
+        duration: 0.8,
+        transform: easeInOut
+      }}
+
+      viewport={{
+        once: true
+      }}
+
+            key={id} className="flex flex-col gap-2">
+          <div className="h-80 bg-black hover:rounded-2xl">
+            <img src={Israel} className="w-full h-full object-cover rounded-[10px]" alt="Balogun Israel Oluwatosin" />
+          </div>
           <div className="flex justify-between mt-4">
             <h1 className="text-xl font-inter tracking-tight hover:underline cursor-pointer">
               {title}
@@ -26,9 +53,9 @@ const ProjectCard = () => {
               View Live Site ↗
             </span>
           </p>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 
