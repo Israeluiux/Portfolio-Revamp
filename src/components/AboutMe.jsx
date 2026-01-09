@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Israel from "../assets/Israel.jpeg"
 
 const AboutMe = () => {
   return (
@@ -34,7 +35,9 @@ const AboutMe = () => {
           Check me
         </Link>
       </div>
-      <div className="h-100 bg-white w-full lg:w-80 rounded-2xl"></div>
+      <div className="h-100 bg-white w-full lg:w-80 rounded-2xl">
+        <img src={Israel} className="w-full h-full object-cover rounded-2xl" alt="Balogun Israel Oluwatosin" />
+      </div>
     </div>
   );
 };

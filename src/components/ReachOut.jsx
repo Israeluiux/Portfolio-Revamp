@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import placeholder from "../assets/placeholder.svg";
+import { FaReact } from "react-icons/fa";
 
 const ReachOut = () => {
   return (

@@ -1,5 +1,6 @@
 import { BiRightArrowCircle } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import Israel from "../assets/Israel.jpeg"
 
 const Hero = () => {
   return (
@@ -7,7 +8,9 @@ const Hero = () => {
       <p className="md:w-180 text-4xl  md:text-6xl leading-10 md:leading-14.5 text-[#0A0A0A] tracking-tighter font-medium">
         <span className="flex items-center gap-4">
           Hey, I'm Israel{" "}
-          <div className="h-10 w-10 bg-blue-800 rounded-[10px] rotate-6"></div>
+          <div className="h-10 w-10 rounded-[10px] rotate-6">
+            <img src={Israel} className="w-full h-full object-cover rounded-[10px]" alt="Balogun Israel Oluwatosin" />
+          </div>
         </span>
         I design and craft bold websites for businesses across all industries.
       </p>
